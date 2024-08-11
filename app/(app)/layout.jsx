@@ -15,6 +15,8 @@ import {
   getAllFollowersAndFollowings,
 } from "@/actions/user";
 import { currentUser } from "@clerk/nextjs";
+
+
 const HomeLayout = async ({ children }) => {
   const queryClient = new QueryClient();
   const user = await currentUser();

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import css from "@/styles/ProfileView.module.css";
 import FollowButton from "./FollowButton";
 import FollowInfoBox from "./FollowInfoBox";
@@ -7,6 +7,7 @@ import PostGenerator from "@/components/Post/PostGenerator";
 import Posts from "@/components/Post/Posts";
 import { useUser } from "@clerk/nextjs";
 import { useQuery } from "@tanstack/react-query";
+import PopularTrends from "@/components/PopularTrends";
 const ProfileBody = ({ userId }) => {
   const { user: currentUser } = useUser();
   const isCurrentUser = currentUser?.id === userId;
@@ -21,6 +22,7 @@ const ProfileBody = ({ userId }) => {
           <FollowInfoBox id={userId} />
           <FriendsSuggestion />
         </div>
+        
       </div>
       <div className={css.right}>
         {isCurrentUser && <PostGenerator />}

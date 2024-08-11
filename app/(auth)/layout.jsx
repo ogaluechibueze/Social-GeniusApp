@@ -13,8 +13,8 @@ const AuthLayout = ({ children }) => {
             src="/images/home2.jpg"
             alt="branding-image"
             quality={100}
-            width={515}
-            height={500}
+            width={300}
+            height={350}
           />
         </div>
         <div className={css.left}>{children}</div>

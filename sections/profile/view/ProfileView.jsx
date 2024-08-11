@@ -6,6 +6,8 @@ import { useQuery } from "@tanstack/react-query";
 import { getUser } from "@/actions/user";
 import ProfileBody from "../ProfileBody";
 import FollowPersonsBody from "../FollowPersonsBody";
+
+
 const ProfileView = ({ userId }) => {
   const { data, isLoading, isError } = useQuery({
     queryKey: ["user", userId],
@@ -44,6 +46,7 @@ const ProfileView = ({ userId }) => {
             <FollowPersonsBody type={"following"} id={userId} />
           )
         }
+       
       </div>
     </div>
   );

@@ -8,15 +8,7 @@ import { Space, Spin, Typography } from "antd";
 const HomeView = () => {
   return (
     <div className={css.wrapper}>
-      <div className={css.postsArea}>
-        {/* post generator on top */}
-        <PostGenerator />
-
-        {/* posts */}
-        <Posts />
-      </div>
-
-      <div className={css.rightSide}>
+       <div className={css.rightSide}>
         <Suspense
           fallback={
             <Space direction="vertical">
@@ -30,6 +22,16 @@ const HomeView = () => {
 
         <FriendsSuggestion />
       </div>
+      
+      <div className={css.postsArea}>
+        {/* post generator on top */}
+        <PostGenerator />
+
+        {/* posts */}
+        <Posts />
+      </div>
+
+     
     </div>
   );
 };

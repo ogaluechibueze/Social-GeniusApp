@@ -102,7 +102,7 @@ const PostGenerator = () => {
 
                 <Input.TextArea
                   // maxLength={100}
-                  placeholder={"Share what you are thinking..."}
+                  placeholder={"write your post here and Share what you are thinking..."}
                   style={{ height: 80, resize: "none", flex: 1 }}
                   value={postText}
                   onChange={(e) => setPostText(e.target.value)}
