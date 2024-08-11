@@ -11,6 +11,8 @@ import SidebarContainer from "./SidebarContainer";
 import { useSettingsContext } from "@/context/settings/settings-context";
 import { useClerk, useUser } from "@clerk/nextjs";
 import Box from "./Box/Box";
+
+
 const Sidebar = () => {
   const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
@@ -62,6 +64,7 @@ const Sidebar = () => {
                   route.route === `/profile/${user?.id}`
                     ? `${route.route}?person=${user?.firstName}`
                     : `${route.route}`
+                    
                 }
                 key={index}
                 className={cx(css.item, isActive(route))}
@@ -79,7 +82,11 @@ const Sidebar = () => {
                   {route.name}
                 </Typography>
               </Link>
+
+              
             ))}
+
+            
 
             <Link
               href={""}

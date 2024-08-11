@@ -20,7 +20,7 @@ const PopularTrends = async () => {
         {/* head */}
         <div className={css.container}>
           <Flex vertical>
-            <Typography className="typoSubtitle2">TOP TRENDING</Typography>
+            <Typography className="typoSubtitle2" >TOP TRENDING</Typography>
             <Typography className="typoH4">#Popular Trends</Typography>
           </Flex>
 

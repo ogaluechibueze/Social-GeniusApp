@@ -1,11 +1,13 @@
 .postGenWrapper {
   border-radius: 1rem;
+
 }
 .container {
   border-radius: 1rem;
   padding: 1.5rem;
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 .previewContainer{
@@ -30,4 +32,6 @@
 
 .bottom{
   width: 100%;
+ 
 }
+

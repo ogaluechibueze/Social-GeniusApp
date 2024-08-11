@@ -150,6 +150,7 @@ const PostGenerator = () => {
               <Flex
                 align="center"
                 justify="space-between"
+                
                 className={css.bottom}
               >
                 {/* upload buttons */}
