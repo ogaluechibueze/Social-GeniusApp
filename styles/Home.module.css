@@ -27,16 +27,22 @@
 @media (max-width: 800px) {
     .wrapper{
     display: block;
-    max-width: 100%;
-    gap: 1rem;
+     gap: 1rem;
+  
     }
 
     .postsArea{
         margin-top: 2rem;
+     
+        gap: 1rem;
+        max-height: 88vh;
+        overflow-y: auto;
+        padding-bottom: 15rem;
     }
      
     .rightSide{
         max-height: 40vh;
+        max-width: 100%;
     }
    
  
