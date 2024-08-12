@@ -33,7 +33,6 @@
 
     .postsArea{
         margin-top: 2rem;
-     
         gap: 1rem;
         max-height: 88vh;
         overflow-y: auto;
@@ -41,8 +40,11 @@
     }
      
     .rightSide{
-        max-height: 40vh;
+        max-height: 50vh;
         max-width: 100%;
+        overflow-y: auto;
+        position: relative;
+       
     }
    
  

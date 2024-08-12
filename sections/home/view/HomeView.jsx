@@ -5,10 +5,12 @@ import Posts from "@/components/Post/Posts";
 import PopularTrends from "@/components/PopularTrends";
 import FriendsSuggestion from "@/components/FriendsSuggestion";
 import { Space, Spin, Typography } from "antd";
+import Box from "@/components/Box/Box";
 const HomeView = () => {
   return (
     <div className={css.wrapper}>
        <div className={css.rightSide}>
+        <Box>
         <Suspense
           fallback={
             <Space direction="vertical">
@@ -21,6 +23,7 @@ const HomeView = () => {
         </Suspense>
 
         <FriendsSuggestion />
+        </Box>
       </div>
       
       <div className={css.postsArea}>
