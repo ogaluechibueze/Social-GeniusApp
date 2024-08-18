@@ -28,7 +28,6 @@
     .wrapper{
     display: block;
      gap: 1rem;
-  
     }
 
     .postsArea{
@@ -36,11 +35,11 @@
         gap: 1rem;
         max-height: 88vh;
         overflow-y: auto;
-        padding-bottom: 20rem;
+        padding-bottom: 23rem;
     }
      
     .rightSide{
-        max-height: 50vh;
+        max-height: 40vh;
         max-width: 100%;
         overflow-y: auto;
         position: relative;
