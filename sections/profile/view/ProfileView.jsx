@@ -6,17 +6,23 @@ import { useQuery } from "@tanstack/react-query";
 import { getUser } from "@/actions/user";
 import ProfileBody from "../ProfileBody";
 import FollowPersonsBody from "../FollowPersonsBody";
-
+import MessageBody from "../MessageBody";
+import { useUser } from "@clerk/nextjs";
 
 const ProfileView = ({ userId }) => {
+  const currentUser = useUser();
   const { data, isLoading, isError } = useQuery({
     queryKey: ["user", userId],
     queryFn: () => getUser(userId),
   });
   const [selectedTab, setSelectedTab] = React.useState("1");
+ 
+ 
   return (
     <div className={css.wrapper}>
+      
       <div className={css.container}>
+   
         {/* head (inclued banner) */}
         <ProfileHead
           data={data}
@@ -25,27 +31,46 @@ const ProfileView = ({ userId }) => {
           userId={userId}
           selectedTab={selectedTab}
           setSelectedTab={setSelectedTab}
-        />
+  />
 
-        {/* body */}
-        {selectedTab === "1" && (
-          <ProfileBody
-            userId={userId}
-            data={data}
-            isLoading={isLoading}
-            isError={isError}
-          />
-        )}
 
-        {selectedTab === "2" && (
-          <FollowPersonsBody type={"followers"} id={userId} />
-        )}
+ 
+  {/* body */}
+  {selectedTab === "1" && (
+    <ProfileBody
+      userId={userId}
+      data={data}
+      isLoading={isLoading}
+      isError={isError}
+    />
+  )}
 
-        {
-          selectedTab === "3" && (
-            <FollowPersonsBody type={"following"} id={userId} />
-          )
-        }
+  {selectedTab === "2" && (
+    <FollowPersonsBody type={"followers"} id={userId} />
+  )}
+
+  {
+    selectedTab === "3" && (
+      <FollowPersonsBody type={"following"} id={userId} />
+    )
+  }
+
+
+  {
+    selectedTab === "4" && (
+    
+      <MessageBody type={"following"} id={userId} />
+    )
+  }
+
+
+  
+  
+
+        
+     
+
+      
        
       </div>
     </div>

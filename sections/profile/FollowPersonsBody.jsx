@@ -18,7 +18,7 @@ const FollowPersonsBody = ({ id, type }) => {
     // 20 mins stale time
     staleTime: 1000 * 60 * 20,
   });
-
+ 
   const { data: currentUserData } = useQuery({
     queryKey: ["user", currentUser?.id, "followInfo"],
     queryFn: () => getAllFollowersAndFollowings(currentUser?.id),

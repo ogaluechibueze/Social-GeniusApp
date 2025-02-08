@@ -118,7 +118,7 @@ const Post = ({ data, queryId }) => {
                   type="secondary"
                   strong
                 >
-                  {dayjs(data?.created_at).format("DD MMM YYYY")}
+                  {dayjs(data?.createdAt).format("DD MMM YYYY")}
                 </Typography.Text>
               </Flex>
             </Flex>

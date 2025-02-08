@@ -22,6 +22,10 @@ const TABS = [
   {
     label: "Followings",
     icon: "fluent:people-20-filled",
+  },
+  {
+    label: "Messages",
+    icon: "eva:message-circle-fill",
   }
 ];
 const ProfileHead = ({
@@ -166,6 +170,7 @@ const ProfileHead = ({
                   TABS.map((tab, i) => {
                   const id = String(i + 1)
                   return {
+                    
                     key: id,
                     label: (
                       <Flex align="center" gap={".5rem"}>
